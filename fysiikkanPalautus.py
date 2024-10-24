@@ -7,8 +7,12 @@ import folium
 from streamlit_folium import folium_static
 from geopy.distance import geodesic
 
-df = pd.read_csv('Linear Acceleration.csv')
-dfmap = pd.read_csv('Location.csv')
+#df = pd.read_csv('Linear Acceleration.csv')
+#dfmap = pd.read_csv('Location.csv')
+url_map = "https://raw.githubusercontent.com/SanteriLehto02/Fysiikan-Lopputy-/refs/heads/main/Location.csv"
+url = "https://raw.githubusercontent.com/SanteriLehto02/Fysiikan-Lopputy-/refs/heads/main/Linear%20Acceleration.csv"
+df = pd.read_csv(url)
+dfmap = pd.read_csv(url_map)
 
 df = df.drop(index=df.index[:25]).reset_index(drop=True)
 dfmap = dfmap.drop(index=dfmap.index[:25]).reset_index(drop=True)
