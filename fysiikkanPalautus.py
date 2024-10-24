@@ -48,7 +48,7 @@ dominant_freq = freq_domain[np.argmax(np.abs(fft_signal[:n // 2]))]
 total_steps = dominant_freq * T
 
 st.write(f"Askeleet: {len(peaks)}")
-st.write(f"Askeleet käyttäen Fourier analysis: {int(total_steps)}")
+st.write(f"Askeleet käyttäen Fourier analyysiä: {int(total_steps)}")
 
 total_distance = 0.0
 for i in range(1, len(dfmap)):
@@ -63,8 +63,8 @@ time_difference = time_last - time_first
 step_length = total_distance / len(peaks)
 average_speed = (total_distance / time_difference) * 3.6
 
-st.write(f"Kävelty matka {total_distance:.2f} meters")
-st.write(f"Askeleen pituus: {step_length:.2f} meters")
+st.write(f"Kävelty matka {total_distance:.2f} metriä")
+st.write(f"Askeleen pituus: {step_length:.2f} metriä")
 st.write(f"Keskinopeus: {average_speed:.2f} km/h")
 
 lat_mean = dfmap['Latitude (°)'].mean()
